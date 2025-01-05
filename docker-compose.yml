@@ -1,0 +1,16 @@
+services:
+  ut2004-server:
+    build:
+      context: .
+    container_name: ut2004-server
+    ports:
+      - "7777:7777/udp"
+      - "7778:7778/udp"
+      - "7787:7787/udp"
+      - "8075:8075/tcp"
+    volumes:
+      - ./ut2004:/ut2004
+    environment:
+      - UT2004_ADMIN_USERNAME=admin
+      - UT2004_ADMIN_PASSWORD=password
+    restart: unless-stopped
