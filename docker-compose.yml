@@ -1,5 +1,6 @@
 services:
   ut2004-server:
+    image: housecat85/ut2004-server
     build:
       context: .
     container_name: ut2004-server
