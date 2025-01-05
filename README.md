@@ -11,5 +11,5 @@ Dieses Repository enthält alles, was Sie benötigen, um einen Unreal Tournament
 
 1. Klonen Sie das Repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/housecat85/ut2004-docker.git
    cd ut2004-docker
