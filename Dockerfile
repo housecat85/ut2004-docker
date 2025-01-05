@@ -2,13 +2,13 @@
 FROM debian:bullseye
 
 # Install required dependencies
-RUN wget --no-check-certificate https://files.tuxfamily.org/kgames/ut2004/ut2004-dedicated-server-3339-2-linux.zip && \
-    unzip ut2004-dedicated-server-3339-2-linux.zip && \
-    rm ut2004-dedicated-server-3339-2-linux.zip
+RUN apt-get update && \
+    apt-get install -y wget unzip lib32gcc-s1 && \
+    mkdir -p /ut2004
 
 # Download and extract the UT2004 dedicated server files
 WORKDIR /ut2004
-RUN wget https://files.tuxfamily.org/kgames/ut2004/ut2004-dedicated-server-3339-2-linux.zip && \
+RUN wget --no-check-certificate https://files.tuxfamily.org/kgames/ut2004/ut2004-dedicated-server-3339-2-linux.zip && \
     unzip ut2004-dedicated-server-3339-2-linux.zip && \
     rm ut2004-dedicated-server-3339-2-linux.zip
 
